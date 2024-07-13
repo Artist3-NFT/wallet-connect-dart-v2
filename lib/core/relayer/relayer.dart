@@ -73,7 +73,7 @@ class Relayer with Events implements IRelayer {
   })  : events = EventEmitter(),
         logger = logger ?? Logger(),
         // relayUrl = relayUrl ?? RELAYER_DEFAULT_RELAY_URL,
-        relayUrl = 'wss://relay.walletconnect.org'
+        relayUrl = 'wss://relay.walletconnect.org',
         messages = MessageTracker(core: core, logger: logger),
         name = RELAYER_CONTEXT,
         transportExplicitlyClosed = false {
